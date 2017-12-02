@@ -1,0 +1,15 @@
+{
+  "name": "js_record_store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "record.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  },
+  "scripts": {
+    "test": "mocha specs"
+  },
+  "author": "",
+  "license": "ISC"
+}
