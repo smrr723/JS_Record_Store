@@ -24,4 +24,15 @@ describe("Record Store", function(){
    it("should be able to print a record's properties in a string", function(){
       assert.strictEqual(record_store.displayProps(record1), "Fly Away, by Lenny Kravitz (Rock) - £10");
    })
+   it("should be able to list items in inventory", function(){
+      assert.strictEqual(record_store.listInventory(), record_store.inventory);
+   })
+   it("should be able to sell a record", function(){
+// act
+      record_store.sell(record1);
+// assert
+      assert.strictEqual(record_store.inventory.length, 2);
+      assert.strictEqual(record_store.inventory[0].artist, "Daft Punk")
+      assert.strictEqual(record_store.balance, 1010);
+   })
 });
