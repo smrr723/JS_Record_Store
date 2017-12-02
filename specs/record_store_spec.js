@@ -35,4 +35,10 @@ describe("Record Store", function(){
       assert.strictEqual(record_store.inventory[0].artist, "Daft Punk")
       assert.strictEqual(record_store.balance, 1010);
    })
+   it("should show financial stats", function(){
+      assert.strictEqual(record_store.financialStats(), "Hi! Jarvis, your Financial Advisor here! Currently you have a store balance of: 1000, and an inventory of 3 items which total: £30!  Keep it up!")
+   })
+   it("should show by genre", function(){
+      assert.strictEqual(record_store.viewByGenre("Electronic"), record2);
+   })
 });
