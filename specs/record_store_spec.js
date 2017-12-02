@@ -21,4 +21,7 @@ describe("Record Store", function(){
    it("should have a balance", function(){
       assert.strictEqual(record_store.balance, 1000);
    })
+   it("should be able to print a record's properties in a string", function(){
+      assert.strictEqual(record_store.displayProps(record1), "Fly Away, by Lenny Kravitz (Rock) - £10");
+   })
 });

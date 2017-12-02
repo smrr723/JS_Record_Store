@@ -14,6 +14,9 @@ Record_Store.prototype = {
    },
    removeBalance: function(amount){
       this.balance -= amount;
+   },
+   displayProps: function(record){
+      return record.title + ", by " + record.artist + " (" + record.genre + ") - £" + record.price;
    }
 };
 
